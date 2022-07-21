@@ -10,6 +10,9 @@
 
     <title>Welcome to PyCon 2022 Slovakia !</title>
 
+    <!-- FAVICON -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico') }}">
+
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -202,7 +205,7 @@
 
                   <div style="padding-top:30px;" class="form-signin">
                     <a style="color:white; margin-bottom:20px;" class="btn btn-lg btn-primary btn-block text-uppercase" href="#">Offline</a>
-                    <a style="color:white; background-color:#000000;" class="btn online btn-lg btn-primary btn-block text-uppercase" href="#">Online</a>
+                    <a style="color:white; background-color:#000000;" class="btn online btn-lg btn-primary btn-block text-uppercase" href="{{ url_for('online_main_page') }}">Online</a>
                   </div>
 
 

@@ -16,5 +16,10 @@ def login_proceed():
     return render_template("continue_login.html")
 
 
+@app.route("/menu")
+def online_main_page():
+    return render_template("online_splash_page.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
