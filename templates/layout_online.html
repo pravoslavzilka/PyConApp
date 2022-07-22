@@ -65,36 +65,24 @@
 							<div class="logo "><a href="#">
 								<img height="70" src="{{ url_for('static', filename='images/pycon_logo.png') }}" alt="PyCon 2022" />
 							</a>
-
-
 							</div>
-
 						</div>
-
 					</div>
-
 					<div class="col-lg-9 col-md-9 col-sm-9 col-12 order-lg-2 order-3 text-lg-left text-right">
 						<div class="row" style="margin-top:17px;">
+							<button class="name noselect">
+								<strong class="event-informer-text"> Blockchain workshop |  15:30</strong>
+							</button>
 
+							<button style="margin-left:40px;" class="name noselect">
+								<strong class="event-informer-text"> Pydantic microservices |  18:30</strong>
+							</button>
 
-								<button class="name noselect">
-									<strong class="event-informer-text"> Blockchain workshop |  15:30</strong>
-								</button>
-
-								<button style="margin-left:40px;" class="name noselect">
-									<strong class="event-informer-text"> Pydantic microservices |  18:30</strong>
-								</button>
-
-								<button style="margin-left:40px;" class="name noselect">
-									<strong class="event-informer-text"> Encryption Lecture |  18:30</strong>
-								</button>
-
-
-
+							<button style="margin-left:40px;" class="name noselect">
+								<strong class="event-informer-text"> Encryption Lecture |  18:30</strong>
+							</button>
 						</div>
-
 					</div>
-
 				</div>
 			</div>
 		</div>
@@ -116,11 +104,7 @@
 									<li><a href="#">Lectures<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Competitions<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Forum<i class="fas fa-chevron-down"></i></a></li>
-
-
 								</ul>
-
-
 							</div>
 
 							<!-- Menu Trigger -->
@@ -228,19 +212,10 @@
 
 	</header>
 
-	<div style="height: 700px">
 
-
-	</div>
 
 </div>
 
-	<div style="height: 700px">
-
-
-	</div>
-
-</div>
 
 
     <main class="content">
@@ -258,7 +233,7 @@
 	          <!-- Grid column -->
 	          <div class="col-md-2 mb-3">
 	            <h6 class="text-uppercase font-weight-bold">
-	              <a target="_blank" href="https://gma.edupage.org/">Škola</a>
+	              <a target="_blank" href="#">PyCon</a>
 	            </h6>
 	          </div>
 	          <!-- Grid column -->
@@ -273,7 +248,7 @@
 	          <!-- Grid column -->
 	    		<div class="col-md-2 mb-3">
 	        	    <h6 class="text-uppercase font-weight-bold">
-	        	      <a href="https://github.com/pravoslavzilka/Book-Share">GitHub</a>
+	        	      <a href="#">GitHub</a>
 	        	    </h6>
 	        	  </div>
 	        	</div>
@@ -300,164 +275,7 @@
 
 </body>
 
-<script>
-	$(document).ready(function()
-{
-	"use strict";
 
-	var menuActive = false;
-	var header = $('.header');
-	setHeader();
-	initCustomDropdown();
-	initPageMenu();
-
-	function setHeader()
-	{
-
-		if(window.innerWidth > 991 && menuActive)
-		{
-			closeMenu();
-		}
-	}
-
-	function initCustomDropdown()
-	{
-		if($('.custom_dropdown_placeholder').length && $('.custom_list').length)
-		{
-			var placeholder = $('.custom_dropdown_placeholder');
-			var list = $('.custom_list');
-		}
-
-		placeholder.on('click', function (ev)
-		{
-			if(list.hasClass('active'))
-			{
-				list.removeClass('active');
-			}
-			else
-			{
-				list.addClass('active');
-			}
-
-			$(document).one('click', function closeForm(e)
-			{
-				if($(e.target).hasClass('clc'))
-				{
-					$(document).one('click', closeForm);
-				}
-				else
-				{
-					list.removeClass('active');
-				}
-			});
-
-		});
-
-		$('.custom_list a').on('click', function (ev)
-		{
-			ev.preventDefault();
-			var index = $(this).parent().index();
-
-			placeholder.text( $(this).text() ).css('opacity', '1');
-
-			if(list.hasClass('active'))
-			{
-				list.removeClass('active');
-			}
-			else
-			{
-				list.addClass('active');
-			}
-		});
-
-
-		$('select').on('change', function (e)
-		{
-			placeholder.text(this.value);
-
-			$(this).animate({width: placeholder.width() + 'px' });
-		});
-	}
-
-	/*
-
-	4. Init Page Menu
-
-	*/
-
-	function initPageMenu()
-	{
-		if($('.page_menu').length && $('.page_menu_content').length)
-		{
-			var menu = $('.page_menu');
-			var menuContent = $('.page_menu_content');
-			var menuTrigger = $('.menu_trigger');
-
-			//Open / close page menu
-			menuTrigger.on('click', function()
-			{
-				if(!menuActive)
-				{
-					openMenu();
-				}
-				else
-				{
-					closeMenu();
-				}
-			});
-
-			//Handle page menu
-			if($('.page_menu_item').length)
-			{
-				var items = $('.page_menu_item');
-				items.each(function()
-				{
-					var item = $(this);
-					if(item.hasClass("has-children"))
-					{
-						item.on('click', function(evt)
-						{
-							evt.preventDefault();
-							evt.stopPropagation();
-							var subItem = item.find('> ul');
-						    if(subItem.hasClass('active'))
-						    {
-						    	subItem.toggleClass('active');
-								TweenMax.to(subItem, 0.3, {height:0});
-						    }
-						    else
-						    {
-						    	subItem.toggleClass('active');
-						    	TweenMax.set(subItem, {height:"auto"});
-								TweenMax.from(subItem, 0.3, {height:0});
-						    }
-						});
-					}
-				});
-			}
-		}
-	}
-
-	function openMenu()
-	{
-		var menu = $('.page_menu');
-		var menuContent = $('.page_menu_content');
-		TweenMax.set(menuContent, {height:"auto"});
-		TweenMax.from(menuContent, 0.3, {height:0});
-		menuActive = true;
-	}
-
-	function closeMenu()
-	{
-		var menu = $('.page_menu');
-		var menuContent = $('.page_menu_content');
-		TweenMax.to(menuContent, 0.3, {height:0});
-		menuActive = false;
-	}
-
-
-});
-</script>
 
 </html>
 
