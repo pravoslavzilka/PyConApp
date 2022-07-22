@@ -1467,6 +1467,9 @@ button:focus {
     .small-screen-nav {
         display: none;
     }
+    .mobile-header {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1493,6 +1496,16 @@ button:focus {
     }
     .small-screen-nav {
         margin-top:500px;
+    }
+
+    .mobile-header {
+        display: block;
+        width: 100%;
+        background-color: #306998;
+        text-align: center;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        height:90px;
     }
 }
 
