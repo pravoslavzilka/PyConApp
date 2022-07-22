@@ -13,27 +13,63 @@
 
     <div class="container">
       <div class="card-deck mb-3 text-center">
-        <div class="card mb-4 box-shadow" style="height:270px;">
-          <div class="card-body" >
 
-            <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/workshop_icon.png' ) }}" />
-            <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Workshops</h3>
+          <div class="card mb-4 box-shadow" style="height:270px;">
+            <a style="text-decoration: none;" class="menu-cards" href="#">
+              <div class="card-body" >
+
+                <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/workshop_icon.png' ) }}" />
+                <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Workshops</h3>
+              </div>
+            </a>
           </div>
-        </div>
+
 
         <div class="card mb-4 box-shadow">
-          <div class="card-body" >
-
-            <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/lecture_icon.png' ) }}" />
-            <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Lectures</h3>
-          </div>
+          <a style="text-decoration: none;" class="menu-cards" href="#">
+            <div class="card-body" >
+              <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/lecture_icon.png' ) }}" />
+              <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Lectures</h3>
+            </div>
+          </a>
         </div>
         <div class="card mb-4 box-shadow">
-          <div class="card-body" >
-
-            <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/comp_icon.png' ) }}" />
-            <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Competitions</h3>
-          </div>
+          <a style="text-decoration: none;" class="menu-cards" href="#">
+            <div class="card-body" >
+              <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/comp_icon.png' ) }}" />
+              <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Competitions</h3>
+            </div>
+          </a>
         </div>
       </div>
+
+      <div class="container">
+      <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow" style="height:270px;">
+          <a style="text-decoration: none;" class="menu-cards" href="#">
+            <div class="card-body" >
+              <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/forum_icon.png' ) }}" />
+              <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Forum</h3>
+            </div>
+          </a>
+        </div>
+
+        <div class="card mb-4 box-shadow">
+          <a style="text-decoration: none;" class="menu-cards" href="#">
+            <div class="card-body" >
+              <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/agenda_icon.png' ) }}" />
+              <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Agenda</h3>
+            </div>
+          </a>
+        </div>
+        <div class="card mb-4 box-shadow">
+          <a style="text-decoration: none;" class="menu-cards" href="#">
+            <div class="card-body" >
+              <img style="margin-top:20px;" height="100" src="{{ url_for('static', filename='images/share_icon.png' ) }}" />
+              <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">PyCon.sk</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
 {% endblock content %}
