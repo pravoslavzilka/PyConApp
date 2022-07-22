@@ -1507,6 +1507,10 @@ button:focus {
         border-bottom-left-radius: 15px;
         height:90px;
     }
+
+    main {
+        padding-bottom:50px;
+    }
 }
 
 
