@@ -31,5 +31,10 @@ def map_page():
     return render_template("map_page.html")
 
 
+@app.route("/workshops")
+def workshop_page():
+    return render_template("workshops_page.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
