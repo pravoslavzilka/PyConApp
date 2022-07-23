@@ -1,0 +1,85 @@
+
+
+@media only screen and (max-width: 600px) {
+
+    .pycon-header {
+        font-size:35px;
+    }
+
+    .pycon-header-subtext {
+        font-size:18px;
+    }
+
+    .large-screen-cards {
+        display: none;
+    }
+
+    .small-screen-cards {
+        display: block;
+    }
+}
+
+
+@media only screen and (min-width: 600px) {
+    .small-screen-cards {
+        display: none;
+    }
+
+}
+
+.small-card {
+    padding:10px;
+}
+
+.small-card-left {
+    margin-right:10px;
+    margin-left:-3px;
+}
+
+.small-card-right {
+    margin-right:-20px;
+    margin-left:-3px;
+}
+
+.menu-cards :hover{
+    color:black;
+
+}
+
+.menu-cards {
+    color:black;
+}
+
+
+.card-menu-image {
+    margin-top:20px;
+    height:70px;
+}
+
+.card-menu-image-text {
+    padding-top:40px;
+    padding-bottom:20px;
+}
+
+@media only screen and (max-width: 420px) {
+    .card-menu-image-text-prep {
+        font-size:17px;
+    }
+
+    .card-menu-image-text {
+        padding-top:20px;
+        padding-bottom:10px;
+    }
+
+    .card-menu-image {
+        height:50px;
+    }
+
+    .small-card-left {
+        height:180px;
+    }
+
+    .small-card-right {
+        height:180px;
+    }
+}
