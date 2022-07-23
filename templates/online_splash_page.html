@@ -46,7 +46,7 @@
           <div class="card-deck mb-3 text-center">
 
               <div class="card mb-4 col-sm-6 box-shadow" style="height:270px;">
-                <a style="text-decoration: none;" class="menu-cards" href="#">
+                <a style="text-decoration: none;" class="menu-cards" href="{{ url_for('workshop_page') }}">
                   <div class="card-body" >
 
                     <img class="card-menu-image" height="100" src="{{ url_for('static', filename='images/workshop_icon.png' ) }}" />
@@ -57,7 +57,7 @@
 
 
             <div class="card mb-4 col-sm-6 box-shadow">
-              <a style="text-decoration: none;" class="menu-cards" href="#">
+              <a style="text-decoration: none;" class="menu-cards" href="{{ url_for('lecture_page') }}">
                 <div class="card-body" >
                   <img class="card-menu-image" height="100" src="{{ url_for('static', filename='images/lecture_icon.png' ) }}" />
                   <h3 style="padding-top:40px;padding-bottom:20px;" class="my-0 font-weight-normal">Lectures</h3>
@@ -112,7 +112,7 @@
               <div class="text-center small-card row">
 
                   <div class="card col-6 box-shadow small-card-left">
-                    <a style="text-decoration: none;" class="menu-cards" href="#">
+                    <a style="text-decoration: none;" class="menu-cards" href="{{ url_for('workshop_page') }}">
                       <div class="card-body" >
 
                         <img class="card-menu-image" src="{{ url_for('static', filename='images/workshop_icon.png' ) }}" />
@@ -124,7 +124,7 @@
 
 
                 <div class="card col-6 box-shadow small-card-right">
-                  <a style="text-decoration: none;" class="menu-cards" href="#">
+                  <a style="text-decoration: none;" class="menu-cards" href="{{ url_for('lecture_page') }}">
                     <div class="card-body" >
                       <img class="card-menu-image" height="70" src="{{ url_for('static', filename='images/lecture_icon.png' ) }}" />
                         <h5 class="my-0 font-weight-normal card-menu-image-text"><span class="card-menu-image-text-prep">Lectures</span></h5>
