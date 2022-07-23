@@ -18,6 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/main.css') }}">
 	<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/header.css') }}">
+	<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/map_page.css') }}">
 	<link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/online_layout.css') }}">
 
 	<!-- JS -->
@@ -107,7 +108,7 @@
 									<li><a href="#">Workshops<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Lectures<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Competitions<i class="fas fa-chevron-down"></i></a></li>
-									<li><a href="#">Map<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="{{ url_for('map_page') }}">Map<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Forum<i class="fas fa-chevron-down"></i></a></li>
 								</ul>
 							</div>
@@ -121,6 +122,36 @@
 				</div>
 			</div>
 		</nav>
+		<div class="mobile-header">
+		 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+			  <div style="padding-top:20px;" class="carousel-inner">
+				<div class="carousel-item active">
+				  <button class="name noselect">
+					  <strong class="event-informer-text"> Blockchain workshop |  15:30</strong>
+				  </button>
+				</div>
+				<div class="carousel-item">
+				  <button class="name noselect">
+					  <strong class="event-informer-text"> Pydantic microservices |  18:30</strong>
+				  </button>
+				</div>
+				<div class="carousel-item">
+				  <button class="name noselect">
+					  <strong class="event-informer-text"> Encryption Lecture |  16:40</strong>
+				  </button>
+				</div>
+			  </div>
+			  <a class="carousel-control-prev" style="margin-top:20px;padding-right:15px;" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			  </a>
+			  <a class="carousel-control-next" style="margin-top:20px;padding-left:15px;" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			  </a>
+			</div>
+
+	 </div>
 
 
 
@@ -143,7 +174,7 @@
 	<div class="small-screen-nav">
 		<div class="row">
 			<div class="col-5">
-				<a href="#">
+				<a href="{{ url_for('map_page') }}">
 					<img style="margin-top:12px;" height="25" src="{{ url_for('static', filename='images/map_icon.png' ) }}" />
 				</a>
 			</div>
