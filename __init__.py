@@ -21,5 +21,10 @@ def online_main_page():
     return render_template("online_splash_page.html")
 
 
+@app.route("/navigation")
+def offline_main_page():
+    return render_template("offline_splash_page.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")

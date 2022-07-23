@@ -103,10 +103,11 @@
 
 							<div class="main_nav_menu">
 								<ul class="standard_dropdown main_nav_dropdown">
-									<li><a href="{{ url_for('online_main_page') }}">Home<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="{{ url_for('offline_main_page') }}">Home<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Workshops<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Lectures<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Competitions<i class="fas fa-chevron-down"></i></a></li>
+									<li><a href="#">Map<i class="fas fa-chevron-down"></i></a></li>
 									<li><a href="#">Forum<i class="fas fa-chevron-down"></i></a></li>
 								</ul>
 							</div>
@@ -143,11 +144,11 @@
 		<div class="row">
 			<div class="col-5">
 				<a href="#">
-					<img style="margin-top:12px;" height="25" src="{{ url_for('static', filename='images/agenda_icon.png' ) }}" />
+					<img style="margin-top:12px;" height="25" src="{{ url_for('static', filename='images/map_icon.png' ) }}" />
 				</a>
 			</div>
 			<div class="col-2">
-				<a href="{{ url_for('online_main_page') }}">
+				<a href="{{ url_for('offline_main_page') }}">
 					<img style="margin-top:12px;" height="25" src="{{ url_for('static', filename='images/home_icon.png' ) }}" />
 				</a>
 			</div>
