@@ -41,5 +41,10 @@ def lecture_page():
     return render_template("lectures_page.html")
 
 
+@app.route("/forum")
+def forum_page():
+    return render_template("forum_page.html")
+
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
